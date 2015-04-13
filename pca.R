@@ -1,5 +1,6 @@
 #load required libraries
 library(ggplot2)
+library(plotly
 
 #set working directory
 setwd('~/forex/')
