@@ -1,9 +1,5 @@
 #load required libraries
 library(ggplot2)
-library(plotly
-
-#set working directory
-setwd('~/forex/')
 
 #load data from folder
 files <-dir()
@@ -29,8 +25,8 @@ pca <-prcomp(vx)
 rnd <-as.data.frame(round(x=pca$rotation,digits=2))
 
 #plotting 
-py <- plotly(username="blackorwa", key="aql7z986iz") 
 p <- ggplot(rnd, aes(x=rnd$PC1,y=rnd$PC2, label=rownames(rnd)))
-pl <-p + geom_text(size=10)
-py$ggplotly(pl)
+pl <- p + geom_text(size=10)
+plot(pl)
+
 
